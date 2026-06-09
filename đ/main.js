@@ -1,16 +1,18 @@
 // ==========================================
-// 1. CẤU HÌNH FIREBASE SDK BẢN CŨ (V8)
+// 1. CẤU HÌNH FIREBASE DỰ ÁN CỦA BẠN (Đã cập nhật)
 // ==========================================
 const firebaseConfig = {
-    apiKey: "AIzaSyA1-Dự-Án-Của-Bạn",
-    authDomain: "du-an-cua-ban.firebaseapp.com",
-    databaseURL: "https://du-an-cua-ban-default-rtdb.firebaseio.com",
-    projectId: "du-an-cua-ban",
-    storageBucket: "du-an-cua-ban.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "1:123456789:web:abcdef"
+    apiKey: "AIzaSyAHAQsxpbzpNedXNRQ06zELrbSqpdkY7Sg",
+    authDomain: "nghich-9cf5e.firebaseapp.com",
+    databaseURL: "https://nghich-9cf5e-default-rtdb.firebaseio.com",
+    projectId: "nghich-9cf5e",
+    storageBucket: "nghich-9cf5e.firebasestorage.app",
+    messagingSenderId: "262275816873",
+    appId: "1:262275816873:web:058d680170d1af231b78b8",
+    measurementId: "G-LWEXC5M7FT"
 };
 
+// Khởi tạo Firebase phiên bản v8/compat ngầm
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
@@ -28,7 +30,7 @@ const examQuestions = [
     { question: "Biểu đồ kiểm soát là", answers: ["Biểu đồ được vẽ thể hiện 3 đường chính: đường tâm, đường giới hạn trên và đường giới hạn dưới", "Biểu đồ được vẽ thể hiện ở 4 đường: 2 đường giới hạn trên và 2 đường giới dưới", "Biểu đồ được vẽ thể hiện 3 đường chính: đường tâm và 2 đường song song", "Biểu đồ được vẽ thể hiện ở 2 đường: đường giới hạn trên và đường giới hạn dưới"], correct: 0 },
     { question: "Trong quản trị sản xuất, quá trình biến đổi là:", answers: ["Tạo ra các yếu tố ngẫu nhiên", "Chuyển hóa các yếu tố đầu vào", "Chuyển hóa các yếu tố đầu ra", "Chuyển hóa các yếu tố đầu vào thành đầu ra"], correct: 3 },
     { question: "Hoàn thiện quản trị sản xuất trong giai đoạn hiện nay là một tất yếu do:", answers: ["Khách hàng yêu cầu", "Các nhà cung ứng yêu cầu", "Nhà nước yêu cầu", "Thách thức của cạnh tranh và sự phát triển lâu dài của doanh nghiệp"], correct: 3 },
-    { question: "Nội dung của quản trị sản xuất bao gồm các hoạt động, NGOẠI TRỪ", answers: ["Thiết kế sản phẩm và quy trình công nghệ", "Đãi ngộ nhân sự", "Xác định vị trí của doanh nghiệp", "Dự báo nhu cầu sản phẩm"], correct: 1 },
+    { question: "Nội dung của quản trị sản xuất bao gồm các hoạt động, NGOẠI TRỪ", answers: ["Thiết kế sản phẩm và quy trình công nghệ", "Đãi ngộ nhân sự", "Xách định vị trí của doanh nghiệp", "Dự báo nhu cầu sản phẩm"], correct: 1 },
     { question: "Câu nào sau đây KHÔNG là mục tiêu của quản trị sản xuất", answers: ["Bảo đảm chất lượng sản phẩm/dịch vụ", "Kéo dài thời gian sản xuất", "Xây dựng hệ thống sản xuất linh hoạt", "Giảm chi phí sản xuất"], correct: 1 },
     { question: "Thiết kế sản phẩm mới là một quá trình bao gồm nhiều hoạt động liên kết chặt chẽ với nhau, đó là:", answers: ["Nghiên cứu xác định nhu cầu của thị trường, hình thành ý tưởng về sản phẩm, lập kế hoạch khảo sát, tiến hành thiết kế sản phẩm, lập kế hoạch sản xuất, đánh giá và đưa vào sản xuất đại trà.", "Nghiên cứu xác định nhu cầu của thị trường, tiến hành thiết kế sản phẩm, lập kế hoạch sản xuất, tổ chức sản xuất thử, đưa sản phẩm vào tiêu dùng thử, đánh giá và đưa vào sản xuất đại trà.", "Hình thành ý tưởng về sản phẩm, lập kế hoạch khảo sát, tiến hành thiết kế sản phẩm, lập kế hoạch sản xuất, tổ chức sản xuất thử, đưa sản phẩm vào tiêu dùng thử, đánh giá và đưa vào sản xuất đại trà.", "Nghiên cứu xác định nhu cầu của thị trường, hình thành ý tưởng về sản phẩm, lập kế hoạch khảo sát, tiến hành thiết kế sản phẩm, lập kế hoạch sản xuất, tổ chức sản xuất thử, đưa sản phẩm vào tiêu dùng thử, đánh giá và đưa vào sản xuất đại trà."], correct: 3 },
     { question: "Điền vào chỗ trống: “Quản trị công suất sản xuất của doanh nghiệp nhằm xác định ……. công suất dây chuyền sản xuất của doanh nghiệp”.", answers: ["Các loại", "Hệ thống", "Kế hoạch", "Quy mô"], correct: 3 },
@@ -45,14 +47,14 @@ const examQuestions = [
     { question: "Để đảm bảo quản lý chất lượng, trước hết nhà sản xuất cần phải chú ý đến vấn đề gì trong các vấn đề sau:", answers: ["Nâng cao chất lượng cung ứng", "Nâng cao chất lượng hệ thống quản lý", "Cải thiện các thuộc tính công dụng của sản phẩm", "Đổi mới sản phẩm"], correct: 1 },
     { question: "Chất lượng sản phẩm chịu ảnh hưởng quyết định bởi yếu tố:", answers: ["Chất lượng nguyên liệu.", "Nhu cầu thị trường.", "Cơ chế chính sách quản lý kinh tế.", "Trình độ công nghệ và đổi mới công nghệ."], correct: 3 },
     { question: "Biểu hiện KHÔNG hiệu quả của Quản lý chất lượng là:", answers: ["Lòng trung thành của khách hàng", "Sử dụng lãng phí nguồn lực", "Bố trí hợp lý các quá trình", "Sự tin tưởng của các bên liên quan"], correct: 1 },
-    { question: "Mq là một thông số giúp ta biết được:", answers: ["Điểm số trung bình của các chỉ tiêu chất lượng", "Hệ số các phương pháp quản lý", "Các chiến lược sản phẩm", "Mức độ đáp ứng yêu cầu của 1 chỉ tiêu chất lượng"], correct: 3 },
+    { question: "Mq là một thông số giúp ta biết được:", answers: ["Điểm số trung bình của các chỉ tiêu chất lượng", "Hệ thống các phương pháp quản lý", "Các chiến lược sản phẩm", "Mức độ đáp ứng yêu cầu của 1 chỉ tiêu chất lượng"], correct: 3 },
     { question: "Tc, QT là những chỉ tiêu chất lượng phản ánh:", answers: ["Hệ số chất lượng", "Khía cạnh kinh tế - kỹ thuật của sản phẩm", "Mức chất lượng sản phẩm", "Mức độ tiêu chuẩn hóa của sản xuất"], correct: 1 },
     { question: "Chỉ tiêu chất lượng toàn phần phản ánh:", answers: ["Kết quả của việc chế tạo SP", "Tính ổn định của quy trình, hệ thống", "Những đặc trưng kinh tế kỹ thuật của SP, DV", "Hiệu quả của việc sử dụng và khai thác sản phẩm"], correct: 3 },
     { question: "Sau khi tính được Hệ số chất lượng, ta có thể tính được:", answers: ["Tỷ lệ sản phẩm được chấp nhận", "Mức độ phù hợp của SP so với nhu cầu", "Tỷ lệ phế phẩm", "SCP do chất lượng SP không ổn định gây ra"], correct: 1 },
     { question: "Xác định Tc and Qt sẽ có thể biết được", answers: ["Hệ số hiệu quả sử dụng của sản phẩm", "Nhu cầu của người tiêu dùng", "Tính hữu ích của sản phẩm", "Các tiêu chuẩn cao nhất của sản phẩm"], correct: 0 },
     { question: "ISO là:", answers: ["Tiêu chuẩn Chất lượng quốc tế", "Là một tổ chức của WTO", "Là một tổ chức của WTO về chất lượng quốc tế", "Tổ chức Quốc tế về Tiêu chuẩn hoá"], correct: 3 },
     { question: "Để duy trì và nâng cao chất lượng sản phẩm, về cơ bản các doanh nghiệp cần phải:", answers: ["Xác định các loại chi phí cần thiết", "Thiết kế tốt", "Xây dựng một Hệ thống Chất lượng hiệu quả", "Thẩm định, lựa chọn phương án sản phẩm"], correct: 2 },
-    { question: "Công cụ giải quyết vấn đề trong quản trị chất lượng là :", answers: ["Áp dụng phương pháp thống kê.", "Cần phải nhờ các chuyên gia cố vấn.", "Những biện pháp định tính.", "Là một nghệ thuật không lượng hóa được."], correct: 0 },
+    { question: "Công cũ giải quyết vấn đề trong quản trị chất lượng là :", answers: ["Áp dụng phương pháp thống kê.", "Cần phải nhờ các chuyên gia cố vấn.", "Những biện pháp định tính.", "Là một nghệ thuật không lượng hóa được."], correct: 0 },
     { question: "Công cụ nào chỉ rõ các vấn đề được ưu tiên giải quyết trước", answers: ["Biểu đồ phân bố.", "Biểu đồ Pareto.", "Biểu đồ nhân quả.", "Biểu đồ kiểm soát."], correct: 1 },
     { question: "Biểu đồ kiểm soát nhằm :", answers: ["Tìm kiếm nguyên nhân gây ra sai sót", "Xác định thứ tự ưu tiên các vấn đề cần giải quyết", "Xem xét động thái của quá trình.", "Mô tả trình tự các bước thực hiện công việc"], correct: 2 },
     { question: "Tổn thất lớn do chất lượng tồi gây ra là", answers: ["Tai nạn lao động", "Chi phí kiểm tra lớn", "Mất lòng tin của khách hàng", "Tỷ lệ phế phẩm cao"], correct: 2 },
@@ -88,7 +90,7 @@ const examQuestions = [
 let userAnswers = {};   
 let currentIndex = 0;   
 let timerInterval = null;
-const roomCode = "TEST_ROOM_60"; 
+const roomCode = "ROOM_TEST_60"; // Node lưu trữ kết quả trên Realtime Database
 
 const feedbackBox = document.getElementById('audio-feedback');
 
@@ -97,8 +99,6 @@ const feedbackBox = document.getElementById('audio-feedback');
 // ==========================================
 function playVoiceFeedback(isCorrect) {
     let textToSpeak = "";
-    
-    // Reset hiệu ứng và thiết lập lớp giao diện mới
     feedbackBox.className = "feedback-box";
     
     if (isCorrect) {
@@ -111,14 +111,12 @@ function playVoiceFeedback(isCorrect) {
         feedbackBox.classList.add('feedback-danger');
     }
 
-    // Sử dụng SpeechSynthesis của trình duyệt để phát âm thanh tiếng Việt ngầm công khai
+    // Kích hoạt giọng nói AI nhân tạo của trình duyệt
     if ('speechSynthesis' in window) {
-        // Hủy các giọng nói đang đọc dở để tránh xếp hàng quá lâu
-        window.speechSynthesis.cancel();
-        
+        window.speechSynthesis.cancel(); // Tắt âm đang xếp hàng trước đó
         const utterance = new SpeechSynthesisUtterance(textToSpeak);
-        utterance.lang = 'vi-VN'; // Cấu hình chuẩn giọng tiếng Việt
-        utterance.rate = 1.0;     // Tốc độ đọc thông thường
+        utterance.lang = 'vi-VN'; 
+        utterance.rate = 1.0;     
         window.speechSynthesis.speak(utterance);
     }
 }
@@ -133,7 +131,6 @@ function hiểnThịCâuHỏi(index) {
     document.getElementById('progressText').textContent = `${Object.keys(userAnswers).length}/${examQuestions.length}`;
     document.getElementById('questionText').textContent = `Câu ${index + 1}: ${item.question}`;
     
-    // Cập nhật trạng thái ô lưới kế bên
     document.querySelectorAll('.grid-item').forEach((el, i) => {
         el.classList.toggle('active', i === index);
     });
@@ -145,7 +142,7 @@ function hiểnThịCâuHỏi(index) {
         const div = document.createElement('div');
         div.className = 'answer-option';
         
-        // Nếu câu hỏi này đã từng được bấm chọn trước đó
+        // Hiển thị màu sắc nếu câu này đã được trả lời
         if (userAnswers[index] !== undefined) {
             if (slot === item.correct) {
                 div.classList.add('selected-correct');
@@ -156,22 +153,19 @@ function hiểnThịCâuHỏi(index) {
         
         div.textContent = ans;
         
-        // Sự kiện khi Đạt click chọn một phương án
+        // Sự kiện Đạt click chọn đáp án
         div.addEventListener('click', () => {
-            // Nếu câu hỏi này chưa chọn đáp án, tiến hành tính điểm và phát âm thanh
             if (userAnswers[index] === undefined) {
                 userAnswers[index] = slot;
                 
-                // Lưu trực tiếp lên Firebase Realtime Database
+                // Đẩy trạng thái tiến độ làm bài lên Firebase của bạn
                 db.ref(`rooms/${roomCode}/states`).set(userAnswers);
                 
                 const isCorrect = (slot === item.correct);
                 playVoiceFeedback(isCorrect);
                 
-                // Vẽ lại giao diện câu hỏi ngay lập tức để hiện màu đúng/sai
                 hiểnThịCâuHỏi(index);
                 
-                // Đổi trạng thái ô lưới câu hỏi bên cạnh
                 const gridCell = document.getElementById(`grid-cell-${index}`);
                 if (gridCell) gridCell.classList.add('done');
             }
@@ -193,7 +187,7 @@ function khởiTạoSơĐồLướiCâuHỏi() {
     });
 }
 
-// Điều hướng câu hỏi
+// Chuyển câu hỏi điều hướng
 document.getElementById('btnPrev').addEventListener('click', () => {
     if (currentIndex > 0) hiểnThịCâuHỏi(currentIndex - 1);
 });
@@ -222,7 +216,7 @@ function bắtĐầuĐếmNgược(seconds) {
 }
 
 document.getElementById('btnSubmit').addEventListener('click', () => {
-    if (confirm("Xác nhận nộp bài kiểm tra trắc nghiệm?")) {
+    if (confirm("Bạn có chắc chắn muốn nộp bài thi lên Firebase không?")) {
         clearInterval(timerInterval);
         xửLýTínhĐiểmNộpBài();
     }
@@ -236,6 +230,7 @@ function xửLýTínhĐiểmNộpBài() {
 
     const finalGrade = ((score / examQuestions.length) * 10).toFixed(2);
 
+    // Đẩy kết quả chung cuộc lưu trữ vĩnh viễn lên cơ sở dữ liệu Firebase của bạn
     db.ref(`rooms/${roomCode}/final_results`).set({
         score: score,
         grade: finalGrade,
@@ -243,7 +238,7 @@ function xửLýTínhĐiểmNộpBài() {
     }).then(() => {
         document.getElementById('screen-quiz').innerHTML = `
             <div style="text-align: center; padding: 40px 10px;">
-                <h2 style="color: #2563eb; font-size: 2rem; margin-bottom: 20px;">KẾT QUẢ KIỂM TRA</h2>
+                <h2 style="color: #2563eb; font-size: 2rem; margin-bottom: 20px;">KẾT QUẢ KIỂM TRA ĐÃ LƯU FIREBASE</h2>
                 <p style="font-size: 1.3rem;">Đạt làm đúng: <strong>${score} / 60 câu</strong></p>
                 <div style="font-size: 3.5rem; font-weight: 900; color: #ef4444; margin: 25px 0;">${finalGrade} Điểm</div>
                 <button onclick="location.reload()" class="btn" style="background:#3b82f6; color:white;">🔄 THỬ LẠI</button>
@@ -252,7 +247,7 @@ function xửLýTínhĐiểmNộpBài() {
     });
 }
 
-// Khởi chạy hệ thống tự động ngay khi tải trang
+// Kích hoạt chạy ngay khi bật trang web
 khởiTạoSơĐồLướiCâuHỏi();
 hiểnThịCâuHỏi(0);
-bắtĐầuĐếmNgược(3600); // 60 phút thi công bằng
+bắtĐầuĐếmNgược(3600); // Đếm ngược 60 phút thi
